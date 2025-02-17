@@ -19,7 +19,7 @@ Insert gif or link to demo
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](![alt text](image.png))
 
 ## Run Locally
 
@@ -58,4 +58,4 @@ Open with live server
 
 ## Support
 
-For support, follow me on [LinkedIn](www.linkedin.com/in/ewear-lima-junior-68aba92a4)z.
+For support, follow me on [LinkedIn](www.linkedin.com/in/ewear-lima-junior-68aba92a4).
