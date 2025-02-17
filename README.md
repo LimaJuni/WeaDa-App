@@ -19,7 +19,7 @@ Insert gif or link to demo
 
 ## Screenshots
 
-![App Screenshot](![alt text](image.png))
+![alt text](image.png)
 
 ## Run Locally
 
