@@ -91,7 +91,7 @@ searchField.addEventListener("input", function () {
 const container = document.querySelector("[data-container]");
 const loading = document.querySelector("[data-loading]");
 const currentLocattionBtn = document.querySelector("[data-current-location-btn]");
-const errorContent = document.querySelector("[data-error-content");
+const errorContent = document.querySelector("[data-error-content]");
 
 /**
  * Render all Weather Data in html page
