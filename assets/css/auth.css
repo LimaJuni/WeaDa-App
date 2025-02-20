@@ -1,0 +1,254 @@
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #06030c 0%, #232248 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 20px auto;
+}
+
+.auth-card {
+    background: rgb(9, 8, 8);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 40px;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.auth-logo {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-logo img {
+    width: 160px;
+    height: auto;
+}
+
+.auth-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.auth-subtitle {
+    color: #9cb0ca;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.social-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #9cb0ca;
+    border-radius: 8px;
+    background: rgb(9, 8, 8);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 24px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #0c0e10;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    background: rgb(9, 8, 8);
+    padding: 0 10px;
+    color: #9cb0ca;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #9cb0ca;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgb(9, 8, 8);
+    color: #fff;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+.auth-submit {
+    width: 100%;
+    padding: 12px;
+    margin: 24px 0;
+    font-size: 16px;
+    background: #232248;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.auth-submit:hover {
+    background: #2d2c5a;
+}
+
+.auth-switch {
+    text-align: center;
+    font-size: 14px;
+    color: #9cb0ca;
+}
+
+.auth-switch a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.auth-switch a:hover {
+    opacity: 0.8;
+}
+
+.auth-footer {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.privacy-text {
+    color: #9cb0ca;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 14px;
+}
+
+.auth-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.auth-links a:hover {
+    opacity: 0.8;
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .auth-container {
+        max-width: 90%;
+    }
+
+    .auth-card {
+        padding: 30px;
+    }
+
+    .auth-logo img {
+        width: 160px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .auth-page {
+        padding: 10px;
+    }
+
+    .auth-container {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .auth-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .auth-title {
+        font-size: 20px;
+    }
+
+    .auth-subtitle {
+        font-size: 14px;
+    }
+
+    .social-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .auth-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+} 
