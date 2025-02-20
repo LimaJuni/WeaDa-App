@@ -23,7 +23,7 @@ const addEventOnElements = function (elements, eventType, callback) {
  * Toggle search in mobile devices
  */
 const searchView = document.querySelector("[data-search-view]");
-const searchTogglers = document.querySelectorAll("[data-search-toggle]");
+const searchTogglers = document.querySelectorAll("[data-search-toggler]");
 
 const toggleSearch = () => searchView.classList.toggle("active");
 addEventOnElements(searchTogglers, "click", toggleSearch);
@@ -60,9 +60,9 @@ searchField.addEventListener("input", function () {
 
                const items = [];
 
-               for (const { name, lat, lon, country, state } of location) {
+               for (const { name, lat, lon, country, state } of locations) {
                  const searchItem = document.createElement("li");
-                 searchItem.classlist.add("view-item");
+                 searchItem.classList.add("view-item");
 
                  searchItem.innerHTML = `
                     <span class="m-icon">location_on</span>
@@ -185,7 +185,7 @@ export const updateWeather = function (lat, lon) {
             }] = airPollution.list;
 
             const card = document.createElement("div");
-            card.classlist.add("card", "card-lg");
+            card.classList.add("card", "card-lg");
 
             card.innerHTML = `
             <h2 class="title-2" id="highlights-label">Todays Highlights</h2>
