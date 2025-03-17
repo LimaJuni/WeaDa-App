@@ -4,114 +4,180 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeaDa - Sign In</title>
-    <meta name="description" content="Join WeaDa for personalized weather forecasts">
     
-    <!-- Favicon -->
+    <!--
+    Primary mata tags
+-->
+    <title>WeaDa</title>
+    <meta name="title" content="WeaDa"> 
+    <meta name="description" content="WeaDa is a weather app made by Lima Junior">
+
+    <!--
+    Favicon
+-->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/auth.css">
+<!--
+- google font link    
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!--
+- custom css link
+  -->
+<link rel="stylesheet" href="./assets/css/style.css">
+
+<!--
+- custom js link
+-->
+<script src="./assets/js/app.js" type="module"></script>
+<script src="./assets/js/route.js" type="module"></script>
 </head>
-<body class="auth-page">
-    <div class="auth-container">
-        <div class="auth-card">
-            <!-- Logo -->
-            <div class="auth-logo">
-                <img src="./assets/images/logo.png" width="200" height="32" alt="WeaDa">
+<body>
+    
+<!--
+- #HEADER    
+-->
+
+<header class="header">
+    <div class="container">
+
+        <a href="#" class="logo">
+            <img src="./assets/images/logo.png" width="364" height="58" alt="logo">
+        </a>
+
+        <div class="search-view " data-search-view>
+            <div class="search-wrapper">
+                <input type="search" name="search" placeholder="Search city..." 
+                autocomplete="off" class="search-field"
+                 data-search-field writingsuggestions="true">
+
+                <span class="m-icon leading-icon">search</span>
+
+            <button class="icon-btn leading-icon has-state" aria-label="close search"
+            data-search-toggler>
+            <span class="m-icon">arrow_back</span>
+            </button>
             </div>
 
-            <!-- Auth Forms -->
-            <div class="auth-forms">
-                <!-- Sign In Form -->
-                <form id="signin-form" class="auth-form active">
-                    <h2 class="auth-title">Welcome Back</h2>
-                    <p class="auth-subtitle">Get your personalized weather updates</p>
 
-                    <div class="social-auth">
-                        <button type="button" class="social-btn">
-                            <img src="./assets/images/google.svg" alt="Google">
-                            Continue with Google
-                        </button>
-                        <button type="button" class="social-btn">
-                            <img src="./assets/images/apple.svg" alt="Apple">
-                            Continue with Apple
-                        </button>
-                    </div>
+            <div class="search-result" data-search-result></div>
 
-                    <div class="divider">
-                        <span>or</span>
-                    </div>
 
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Email address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" placeholder="Password" required>
-                    </div>
+        </div>
 
-                    <button type="submit" class="btn-primary auth-submit">Sign In</button>
+        <div class="header-actions">
 
-                    <p class="auth-switch">
-                        Don't have an account? <a href="#" data-form="signup">Sign Up</a>
-                    </p>
-                </form>
+            <button class="icon-btn has-state" aria-label="open search"
+            data-search-toggler>
+            <span class="m-icon icon">search</span>
+        </button>
 
-                <!-- Sign Up Form -->
-                <form id="signup-form" class="auth-form">
-                    <h2 class="auth-title">Create Account</h2>
-                    <p class="auth-subtitle">Join for personalized weather forecasts</p>
+        <a href="./main.html" class="btn-secondary has-state">
+            <span class="m-icon">person</span>
+            <span class="span">Sign In</span>
+        </a>
 
-                    <div class="social-auth">
-                        <button type="button" class="social-btn">
-                            <img src="./assets/images/google.svg" alt="Google">
-                            Continue with Google
-                        </button>
-                        <button type="button" class="social-btn">
-                            <img src="./assets/images/apple.svg" alt="Apple">
-                            Continue with Apple
-                        </button>
-                    </div>
+        <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
+            <span class="m-icon">my_location</span>
 
-                    <div class="divider">
-                        <span>or</span>
-                    </div>
+            <span class="span">Current Location</span>
+        </a>
 
-                    <div class="form-group">
-                        <input type="text" name="fullname" placeholder="Full name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Email address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" placeholder="Password" required>
-                    </div>
-
-                    <button type="submit" class="btn-primary auth-submit">Create Account</button>
-
-                    <p class="auth-switch">
-                        Already have an account? <a href="#" data-form="signin">Sign In</a>
-                    </p>
-                </form>
-            </div>
-
-            <footer class="auth-footer">
-                <p class="privacy-text">We respect your privacy and never share your data</p>
-                <div class="auth-links">
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Help Center</a>
-                </div>
-            </footer>
         </div>
     </div>
+</header>
 
-    <script src="./assets/js/auth.js"></script>
+
+
+
+<main>
+    <article class="container" data-container>
+        <div class="content-left">
+            <!--
+            Current weather
+            -->
+
+            <section class="section current-weather" aria-label="current-weather" data-current-weather>
+                <div class="card card-lg current-weather-card"></div>
+            </section>
+
+
+
+
+            <!--
+            - #FORECAST
+            -->
+
+            <section class="section forecast" aria-labelledby="forecast-label" 
+            data-5-day-forecast></section>
+        </div>
+
+
+
+
+
+        <div class="content-right">
+            <!---
+            - $HIGHLIGHTS
+            -->
+
+            <section class="section highlights"
+            aria-labelledby="highlights-label" data-highlights></section>
+
+
+
+           <!---
+           - #HOURLY FORECAST
+           -->
+
+           <section class="section hourly-forecast" aria-label="hourly forecast"
+           data-hourly-forecast></section>
+
+
+
+
+           <!---
+           - #FOOTER
+           -->
+   
+           <footer class="footer">
+               <p class="body-3">
+                   Copyright 2025 Lima Junior. All Rights Reserved.
+               </p>
+   
+               <p class="body-3">
+                   Powered By <a href="https://openweathermap.org/api" title="Free OpenWeather Api" target="_blank" rel="noopener">
+                       <img src="./assets/images/openweather.png" width="150" height="30" loading="lazy" alt="OpenWeather">
+                   </a>
+               </p>
+           </footer>
+
+
+        </div>
+
+        <div class="loading" data-loading></div>
+
+    </article>
+</main>
+
+
+
+
+<!--
+- #404 SECTION
+-->
+
+<section class="error-content" data-error-content>
+
+    <h2 class="heading">404</h2>
+
+    <p class="body-1">Page not found!</p>
+
+    <a href="#/weather?lat=51.5073219&lon=0.1276474" class="btn-primary">
+        <span class="span">Go Home</span>
+    </a>
+</section>
+
 </body>
-</html> 
+</html>
