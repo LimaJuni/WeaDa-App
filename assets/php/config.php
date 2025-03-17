@@ -1,9 +1,9 @@
 <?php
-// Database configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'weada_db');
+// Update with your InfinityFree database credentials
+define('DB_HOST', 'sql113.infinityfree.com'); // Usually something like sql.infinityfree.com
+define('DB_USER', 'if0_38375915');    // From step 4
+define('DB_PASS', 'WeaDa123');    // From step 4
+define('DB_NAME', 'if0_38375915_weada_db');        // From step 4
 
 // Create database connection
 try {
