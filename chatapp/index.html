@@ -137,6 +137,10 @@
       chatMessages.appendChild(welcomeMessage);
     });
 
+    require('dotenv').config();
+
+const authToken = process.env.AUTH_TOKEN;
+
     async function sendMessage() {
       const input = document.getElementById('userInput').value.trim();
       const chatMessages = document.getElementById('chat-messages');
@@ -212,7 +216,7 @@
           {
             method: 'POST',
             headers: {
-              Authorization: 'Bearer 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',
+              Authorization: `Bearer ${authToken}`,
               'HTTP-Referer': 'https://www.sitename.com',
               'X-Title': 'SiteName',
               'Content-Type': 'application/json',

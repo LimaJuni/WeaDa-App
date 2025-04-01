@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
-                  'Authorization': 'Bearer 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'
+                  'Authorization': 'Bearer '
                 },
                 body: JSON.stringify({
                   model: 'deepseek-reasoner',
